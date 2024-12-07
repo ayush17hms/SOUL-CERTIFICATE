@@ -8,6 +8,7 @@ import "@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
 
+
 // Define the contract as upgradeable
 contract test55 is Initializable, ERC721URIStorageUpgradeable {
     using StringsUpgradeable for uint256; // Use Strings library for uint256 conversions
@@ -78,3 +79,4 @@ contract test55 is Initializable, ERC721URIStorageUpgradeable {
         return _NTTNames[NTTId]; // Return the name of the NTT
     }
 }
+

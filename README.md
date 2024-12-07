@@ -26,14 +26,25 @@ This repository hosts the code for the `SOUL CERTIFICATE` project, a blockchain-
    npm install
    ```
 
-3. **Set Up Environment Variables**:
-   Create a `.env` file in the root directory and configure the following variables:
-   ```env
-   INFURA_PROJECT_ID=your-infura-project-id
-   CONTRACT_ADDRESS=your-contract-address
-   ```
+3. **Deploy the Smart Contract**:
+   - Open [Remix IDE](https://remix.ethereum.org/).
+   - Navigate to the `contracts/` folder and open your contract file (e.g., `SoulCertificate.sol`).
+   - Compile the contract and deploy it to the Sepolia TestNet.
+   - Copy the deployed contract address.
 
-4. **Start the Application**:
+4. **Configure API and Contract Address**:
+   - Open the `ntt.json` file and add your Infura Project ID:
+     ```json
+     {
+       "infura_project_id": "your-infura-project-id"
+     }
+     ```
+   - In `AfterLogin.js`, replace the placeholder with your contract address:
+     ```javascript
+     const contractAddress = "your-deployed-contract-address";
+     ```
+
+5. **Start the Application**:
    ```bash
    npm start
    ```
@@ -50,7 +61,6 @@ This repository hosts the code for the `SOUL CERTIFICATE` project, a blockchain-
 2. **Verification**:
    - Input the transaction hash or wallet address to retrieve and verify the certificate details.
 
----
 
 ## Folder Structure
 ```
@@ -65,7 +75,6 @@ SOUL-CERTIFICATE/
 ├── package.json             # Project dependencies
 ├── README.md                # Documentation
 ```
-
 ---
 
 ## Technology Stack
