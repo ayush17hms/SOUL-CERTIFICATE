@@ -26,25 +26,44 @@ This repository hosts the code for the `SOUL CERTIFICATE` project, a blockchain-
    npm install
    ```
 
-3. **Deploy the Smart Contract**:
-   - Open [Remix IDE](https://remix.ethereum.org/).
-   - Navigate to the `contracts/` folder and open your contract file (e.g., `SoulCertificate.sol`).
-   - Compile the contract and deploy it to the Sepolia TestNet.
-   - Copy the deployed contract address.
+3. **Set Up Environment Variables**:
+   Create a `.env` file in the root directory and configure the following variables:
+   ```env
+   INFURA_PROJECT_ID=your-infura-project-id
+   CONTRACT_ADDRESS=your-contract-address
+   ```
 
-4. **Configure API and Contract Address**:
-   - Open the `ntt.json` file and add your Infura Project ID:
-     ```json
-     {
-       "infura_project_id": "your-infura-project-id"
-     }
-     ```
-   - In `AfterLogin.js`, replace the placeholder with your contract address:
-     ```javascript
-     const contractAddress = "your-deployed-contract-address";
-     ```
+4. **Deploy the Smart Contract**:
+   To deploy the smart contract, use Remix IDE or any suitable Ethereum development tool.
+   - Open Remix IDE: [https://remix.ethereum.org/](https://remix.ethereum.org/)
+   - Load your Solidity contract from the `src/contracts` folder.
+   - Compile the contract.
+   - Connect your wallet (e.g., MetaMask) and deploy the contract to the Sepolia TestNet.
 
-5. **Start the Application**:
+   **Note**: Ensure you have test ETH in your wallet to pay for the deployment transaction.
+
+5. **Update the ABI and Contract Address**:
+   - After deployment, copy the contract address and save it in the `.env` file as `CONTRACT_ADDRESS`.
+   - The ABI of the deployed contract can be found in the `NTT.json` file located in the `src/contracts` folder.
+
+   **Example**:
+   ```json
+   {
+     "contractAddress": "0xYourContractAddressHere",
+     "abi": [
+       // ABI JSON array
+     ]
+   }
+   ```
+
+6. **Integrate ABI and Contract Address**:
+   - Open `src/components/AfterLogin.js` and ensure the contract address and ABI are properly imported.
+   ```javascript
+   import contractABI from '../contracts/NTT.json';
+   const contractAddress = process.env.CONTRACT_ADDRESS;
+   ```
+
+7. **Start the Application**:
    ```bash
    npm start
    ```
@@ -60,6 +79,8 @@ This repository hosts the code for the `SOUL CERTIFICATE` project, a blockchain-
 
 2. **Verification**:
    - Input the transaction hash or wallet address to retrieve and verify the certificate details.
+
+---
 
 
 ## Folder Structure
@@ -106,3 +127,4 @@ Contributions are welcome! To contribute:
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
+
