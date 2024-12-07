@@ -1,0 +1,65 @@
+/* homePage.css */
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+  }
+  
+  .home-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 75vw;
+    text-align: center;
+  }
+  
+  .home-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .home-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  .project-details {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 1rem;
+  }
+  
+  .project-feature {
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .feature-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .action-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .action-button:hover {
+    background-color: #0056b3;
+  }
+  

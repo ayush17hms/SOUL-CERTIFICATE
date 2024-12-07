@@ -1,0 +1,73 @@
+/* verifyCertificate.css */
+.verify-certificate{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.verifier-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh; /* Full height of the viewport */
+    width: 600px;
+    background-color: #f9f9f9; /* Light background color */
+    font-family: Arial, sans-serif; /* Font for the entire component */
+    border-radius: 10px;
+    background-color: rgb(255 255 255 / 90%)
+}
+
+.verifier-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333; /* Darker text color for better readability */
+}
+
+.transaction-input {
+    width: 100%;
+    max-width: 500px; /* Max width for input */
+    padding: 12px;
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.verify-button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* Text color for the button */
+    padding: 12px 20px; /* Button padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.verify-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.error-message {
+    color: red; /* Red color for error messages */
+    margin-top: 10px; /* Space above the error message */
+}
+
+.certificate-data {
+    margin-top: 20px;
+    /* background-color: #f8f9fa;  */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%;
+    max-width: 500px; /* Max width for the certificate data display */
+    /* background-color: rgb(255 255 255 / 90%) */
+}
+
+.certificate-data h2 {
+    margin-bottom: 10px; /* Space below the heading */
+    color: #333; /* Darker text for better readability */
+}
